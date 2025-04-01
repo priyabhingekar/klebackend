@@ -16,7 +16,8 @@ app.use(express.json());
 
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/priya')
+let MONGODB_URL='mongodb+srv://priyabhingekar:z7dJBXUjlDTrbyOD@cluster0.cpqn6nd.mongodb.net/?retryWrites=true&w=majority'
+mongoose.connect(MONGODB_URL)
 .then(()=>{
     console.log('db connected');
 }).catch((err)=>{
